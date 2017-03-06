@@ -4,9 +4,6 @@ from math import sqrt
 class AbCalc:
 
     def __init__(self):
-        self._significance = .95
-        self._power = .8
-
         self._zs_1s = 1.644853625  # One-tailed Z-value for statistical significance equal 0.95
         self._zs_2s = 1.959963986  # Two-tailed Z-value for statistical significance equal 0.95
         self._zp = .8416212327  # Two-tailed Z-value for statistical power equal 0.8
@@ -25,7 +22,7 @@ class AbCalc:
         # One-tailed significance test
         z = (p - pc) / sqrt((p * (1 - p) / test_total) + (pc * (1 - pc) / control_total))
 
-        if z > self._zs_1s:
+        if abs(z) > self._zs_2s:
             self.is_significant = True
 
         self.effect_size = round(p / pc - 1., 4)
