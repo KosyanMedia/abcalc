@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='abcalc',
     packages=['abcalc'],
-    version='1.0.0',
+    version='1.0.1',
     description='AB split test calculator',
     author='Ivan Miniailenko',
     author_email='discrete.west@gmail.com',
