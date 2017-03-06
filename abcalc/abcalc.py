@@ -28,7 +28,7 @@ class AbCalc:
         if z > self._zs_1s:
             self.is_significant = True
 
-        self.effect_size = round(abs(p / pc - 1.), 4)
+        self.effect_size = round(p / pc - 1., 4)
 
         sd1 = sqrt(2 * pc * (1 - pc))
         sd2 = sqrt(pc * (1 - pc) + (pc + minimum_effect) * (1 - pc - minimum_effect))
